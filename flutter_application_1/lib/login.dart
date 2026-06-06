@@ -12,7 +12,7 @@ class Login extends StatelessWidget {
       appBar: AppBar(title: Text("Login Page")),
       body: Column(
         children: [
-          Text("Welcome to My Day, Login to continue"),
+          Text("Welcome to ProFinder, Login to continue"),
           SizedBox(height: 20),
           Text("Email:"),
           TextFormField(),

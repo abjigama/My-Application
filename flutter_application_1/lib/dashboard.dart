@@ -27,8 +27,8 @@ class Dashboard extends StatelessWidget {
             onTap: null,
             child: Card(
               child: ListTile(
-                title: Text("Wake up"),
-                subtitle: Text("5:00 AM"),
+                title: Text("Consultant"),
+                subtitle: Text("paediatrics"),
               ),
             ),
           ),
