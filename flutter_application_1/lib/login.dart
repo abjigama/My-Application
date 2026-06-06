@@ -10,5 +10,7 @@ class ProFinder extends StatelessWidget{
      appBar: AppBar(title: Text("Login Page"),
        
 
-    )
+    ),
+    );
   }
+}
