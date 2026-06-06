@@ -4,7 +4,11 @@ import 'sign_up.dart';
 import 'dashboard.dart';
 
 class Login extends StatelessWidget {
-  const Login({super.key});
+   Login({super.key});
+
+  String email = "";
+  String password = "";
+  bool incorrect = false;
 
   @override
   Widget build(BuildContext context) {
@@ -15,11 +19,24 @@ class Login extends StatelessWidget {
           Text("Welcome to ProFinder, Login to continue"),
           SizedBox(height: 20),
           Text("Email:"),
-          TextFormField(),
+          TextFormField(
+            onChanged: (value){
+              email = value;
+            }
+          ),
           SizedBox(height: 10),
           Text("Password:"),
-          TextFormField(obscureText: true),
+          TextFormField(obscureText: true,
+          onChanged: (value){
+            password = value;
+          },
+          ),
           SizedBox(height: 20),
+          Visibility(
+            visible: incorrect,
+            child: Text("incorrect login details",
+            style: 
+            TextStyle(color: Colors.red))),
           ElevatedButton(
             onPressed: () {
               Navigator.pushAndRemoveUntil(
@@ -27,6 +44,14 @@ class Login extends StatelessWidget {
                 MaterialPageRoute(builder: (context) => Dashboard()),
                 (route) => false,
               );
+              if (email == "group3@idga.com.ng" && password == "12345678"){
+                Navigator.pushAndRemoveUntil(context, 
+                MaterialPageRoute(builder: (context) => Dashboard()),
+                (route) => false,
+                );
+              } else {
+                incorrect = true;
+              }
             },
             child: Text("Submit"),
           ),
@@ -55,3 +80,4 @@ class Login extends StatelessWidget {
     );
   }
 }
+

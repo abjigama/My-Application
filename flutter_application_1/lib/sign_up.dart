@@ -12,24 +12,24 @@ class SignUp extends StatelessWidget {
       body: Column(
         children: [
           Text(
-            "Welcome to My Day, a daily planning app. Create an account to start",
+            "Welcome to ProFinder, a daily planning app. Create an account to start",
           ),
           SizedBox(height: 20),
           Text("Full Name:"),
           TextFormField(),
-          SizedBox(height: 10),
+          SizedBox(height: 0.7),
           Text("Email Address:"),
           TextFormField(),
-          SizedBox(height: 10),
+          SizedBox(height: 0.7),
           Text("Phone Number:"),
           TextFormField(),
-          SizedBox(height: 10),
+          SizedBox(height: 0.7),
           Text("Password:"),
           TextFormField(obscureText: true),
-          SizedBox(height: 10),
+          SizedBox(height: 0.7),
           Text("Confirm Password"),
           TextFormField(obscureText: true),
-          SizedBox(height: 20),
+          SizedBox(height: 0.7),
           ElevatedButton(
             onPressed: () {
               Navigator.push(
@@ -43,9 +43,10 @@ class SignUp extends StatelessWidget {
           Text("Already have an account?"),
           ElevatedButton(
             onPressed: () {
-              Navigator.push(
+              Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(builder: (context) => Login()),
+                (route) => false
               );
             },
             child: Text("Back to Login"),
