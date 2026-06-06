@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'login.dart';
 
 class Profile extends StatelessWidget {
   const Profile({super.key});
@@ -7,40 +7,24 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Profile Page")),
+      appBar: AppBar(title: Text("Profile")),
       body: Column(
         children: [
-          Image.network(
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBD9kJLV4sOfffui-1LJnW9dGiR9UPneZLsg&s",
-            width: 100,
-            height: 100,
-          ),
-          ElevatedButton(onPressed: () {}, child: Text("Select Image")),
-          Card(
-            child: ListTile(
-              title: Text("Name"),
-              subtitle: Text("Aliyu Lawal"),
-            ),
-          ),
-          Card(
-            child: ListTile(
-              title: Text("Email:"),
-              subtitle: Text("aliyulawal@gmail.com"),
-            ),
-          ),
-          Card(
-            child: ListTile(
-              title: Text("Phone Number"),
-              subtitle: Text("09164057294"),
-            ),
-          ),
-          SizedBox(height: 50),
+          Card(child: ListTile(title: Text("Full Name:"))),
+          Card(child: ListTile(title: Text("Email:"))),
+          Card(child: ListTile(title: Text("Phone Number:"))),
+          SizedBox(height: 20),
           ElevatedButton(
             onPressed: () {
-              Navigator.push(
+              Navigator.pushAndRemoveUntil(
                 context,
-                MaterialPageRoute(builder: (context) => Profile()),
+                MaterialPageRoute(builder: (context) => Login()),
+                (route) => false,
               );
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(builder: (context) => Login()),
+              // );
             },
             child: Text("Logout"),
           ),
