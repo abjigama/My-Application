@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'login.dart';
+import 'delete_account.dart';
 
 class Profile extends StatelessWidget {
   const Profile({super.key});
@@ -10,9 +11,11 @@ class Profile extends StatelessWidget {
       appBar: AppBar(title: Text("Profile")),
       body: Column(
         children: [
-          Card(child: ListTile(title: Text("Full Name:"))),
+          Card(child: ListTile(title: Text("Name:"))),
           Card(child: ListTile(title: Text("Email:"))),
           Card(child: ListTile(title: Text("Phone Number:"))),
+           GestureDetector(onTap: null,child: Card(child: ListTile(title: Text("Change Username:")))),
+          GestureDetector(onTap: null,child: Card(child: ListTile(title: Text("Change Password:")))),
           SizedBox(height: 20),
           ElevatedButton(
             onPressed: () {
@@ -26,7 +29,20 @@ class Profile extends StatelessWidget {
               //   MaterialPageRoute(builder: (context) => Login()),
               // );
             },
-            child: Text("Logout"),
+            child: Text("Logout"),),
+            SizedBox(height: 20),
+            ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => DeleteAccount()),
+              );
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(builder: (context) => Login()),
+              // );
+            },
+            child: Text("Delete Account"),
           ),
         ],
       ),

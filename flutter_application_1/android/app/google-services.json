@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "718293653182",
+    "project_id": "profinder-50344",
+    "storage_bucket": "profinder-50344.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:718293653182:android:a42c1a130933f37b3b70ef",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcIhvjt7sJ79uruKMmq-1yxWowgVejBJ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
