@@ -58,6 +58,7 @@ class Register extends StatefulWidget {
                 style: const TextStyle(color: Colors.red)
                 ),
                 const SizedBox(height: 10),
+                
 
             
               ],
