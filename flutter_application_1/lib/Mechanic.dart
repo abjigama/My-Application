@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Page6 extends StatelessWidget{
-  const Page6({super.key});
+class Mechanic extends StatelessWidget{
+  const Mechanic({super.key});
   @override
   Widget build(BuildContext context){
     return Scaffold(
@@ -10,7 +10,7 @@ class Page6 extends StatelessWidget{
          
          
          foregroundColor: const Color.fromARGB(255, 16, 16, 16),
-         backgroundColor: const Color.from(alpha: 1, red: 0.047, green: 0.173, blue: 0.278)),
+         backgroundColor: const Color.fromARGB(255, 56, 117, 166)),
         
          body:ListView(
           padding:EdgeInsets.only(left: 50, right: 50),

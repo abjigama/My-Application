@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'profile.dart';
-import 'consultant_page.dart';
+import 'consultant.dart';
+import 'Mechanic.dart';
+import 'electrician.dart';
+import 'farming.dart';
 
 
 class Dashboard extends StatelessWidget {
   const Dashboard({super.key});
   
-  void get consultant_page => null;
+  void get consultant => null;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +31,12 @@ class Dashboard extends StatelessWidget {
       body: Column(
         children: [
           GestureDetector(
-            onTap: null,
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Consultant()),
+              );
+            },
             child: Card(
               child: ListTile(
                 title: Text("Consultant"),
@@ -38,7 +46,12 @@ class Dashboard extends StatelessWidget {
             ),
           ),
           GestureDetector(
-            onTap: null,
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Mechanic()),
+              );
+            },
             child: Card(
               child: ListTile(
                 title: Text("Mechanic"), subtitle: Text("Automobile Repair"),
@@ -53,7 +66,12 @@ class Dashboard extends StatelessWidget {
             ),
           ),
           GestureDetector(
-            onTap: null,
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Electrician()),
+              );
+            },
             child: Card(
               child: ListTile(
                 title: Text("Electrician"),
@@ -63,7 +81,12 @@ class Dashboard extends StatelessWidget {
             ),
           ),
           GestureDetector(
-            onTap: null,
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Farming()),
+              );
+            },
             child: Card(
               child: ListTile(title: Text("Farming"), subtitle: Text("Rearing"),
               leading: Icon(Icons.grass)
