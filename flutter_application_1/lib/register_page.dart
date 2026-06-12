@@ -12,7 +12,7 @@ class Register extends StatefulWidget {
 
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  final AuthServices authServices = AuthServices();
+  final authServices authServices = AuthServices();
   String errorMessage = '';
 
     @override
