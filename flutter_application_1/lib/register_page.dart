@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'auth_services.dart';
+import 'auth_service.dart';
 import 'login.dart';
 
 class Register extends StatefulWidget {
@@ -12,7 +12,7 @@ class Register extends StatefulWidget {
 
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  final authServices authServices = AuthServices();
+  final authService  = AuthServices();
   String errorMessage = '';
 
     @override
@@ -23,7 +23,7 @@ class Register extends StatefulWidget {
    }
       void register() async{
         try {
-          await authServices.createAccount(
+          await authService.createAccount(
           email: _emailController.text,
           password: _passwordController.text,
          );
