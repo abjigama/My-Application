@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/sign_up.dart';
 
 ValueNotifier<AuthServices> authServices = ValueNotifier(AuthServices());
 
@@ -20,7 +21,7 @@ class AuthServices {
       email: email, password: password);
       
   }
-  Future<UserCredential> createAccount({
+  Future<UserCredential> SignUp({
     required String email,
     required String password,
   })  async {
@@ -61,6 +62,8 @@ class AuthServices {
     await currentUser!.reauthenticateWithCredential(credential);
     await currentUser!.updatePassword(newpassword);
   }
+
+  Future<void> createAccount({required String email, required String password}) async {}
 
 
 

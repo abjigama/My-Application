@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'forget_password.dart';
-
+import 'sign_up.dart';
 import 'dashboard.dart';
-import 'register_page.dart';
+import 'register.dart';
 
 class Login extends StatelessWidget {
    Login({super.key});
@@ -67,15 +67,15 @@ class Login extends StatelessWidget {
             child: Text("Forget password"),
           ),
           SizedBox(height: 20),
-          //ElevatedButton(
-            //onPressed: () {
-              //Navigator.push(
-                //context,
-                //MaterialPageRoute(builder: (context) => SignUp()),
-              //);
-            //},
-            //child: Text("Sign up"),
-          //),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => SignUp()),
+              );
+            },
+            child: Text("Sign up"),
+          ),
             SizedBox(height: 20),
              TextButton(onPressed: (){
               Navigator.push(

@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'login.dart';
 import 'dashboard.dart';
 
+
 class SignUp extends StatelessWidget {
   const SignUp({super.key});
+  
 
   @override
   Widget build(BuildContext context) {
@@ -30,15 +32,15 @@ class SignUp extends StatelessWidget {
           Text("Confirm Password"),
           TextFormField(obscureText: true),
           SizedBox(height: 0.7),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Login()),
-              );
-            },
-            child: Text("Create Account"),
-          ),
+          //ElevatedButton(
+           // onPressed: () {
+              //Navigator.push(
+               // context,
+              //  MaterialPageRoute(builder: (context) => Login()),
+            //  );
+           // },
+            //child: Text("Create Account"),
+          //),
           SizedBox(height: 20),
           Text("Already have an account?"),
           ElevatedButton(
