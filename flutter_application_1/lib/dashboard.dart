@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'profile.dart';
+import 'consultant_page.dart';
 
 
 class Dashboard extends StatelessWidget {
   const Dashboard({super.key});
+  
+  void get consultant_page => null;
 
   @override
   Widget build(BuildContext context) {
