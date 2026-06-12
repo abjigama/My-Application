@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'profile.dart';
 
+
 class Dashboard extends StatelessWidget {
   const Dashboard({super.key});
 
@@ -35,7 +36,8 @@ class Dashboard extends StatelessWidget {
           GestureDetector(
             onTap: null,
             child: Card(
-              child: ListTile(title: Text("Pray"), subtitle: Text("5:30 AM")),
+              child: ListTile(
+                title: Text("Pray"), subtitle: Text("5:30 AM")),
             ),
           ),
           GestureDetector(
