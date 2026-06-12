@@ -4,6 +4,7 @@ import 'consultant.dart';
 import 'Mechanic.dart';
 import 'electrician.dart';
 import 'farming.dart';
+import 'event_planner.dart';
 
 
 class Dashboard extends StatelessWidget {
@@ -59,7 +60,12 @@ class Dashboard extends StatelessWidget {
             ),
           ),
           GestureDetector(
-            onTap: null,
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => EventPlanner()),
+              );
+            },
             child: Card(
               child: ListTile(title: Text("Event PLanner"), subtitle: Text("Decoration"),
               leading: Icon( Icons.chair),),

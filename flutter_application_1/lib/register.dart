@@ -23,7 +23,7 @@ class Register extends StatefulWidget {
    }
       void register() async{
         try {
-          await authService.createAccount(
+          await authService.sign_up(
           email: _emailController.text,
           password: _passwordController.text,
          );
