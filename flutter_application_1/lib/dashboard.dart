@@ -30,6 +30,7 @@ class Dashboard extends StatelessWidget {
               child: ListTile(
                 title: Text("Consultant"),
                 subtitle: Text("paediatrics"),
+                leading: Icon(Icons.local_hospital),
               ),
             ),
           ),
@@ -37,28 +38,33 @@ class Dashboard extends StatelessWidget {
             onTap: null,
             child: Card(
               child: ListTile(
-                title: Text("Pray"), subtitle: Text("5:30 AM")),
+                title: Text("Mechanic"), subtitle: Text("Automobile Repair"),
+                leading: Icon(Icons.car_crash_outlined),),
             ),
           ),
           GestureDetector(
             onTap: null,
             child: Card(
-              child: ListTile(title: Text("Bath"), subtitle: Text("6:00 AM")),
+              child: ListTile(title: Text("Event PLanner"), subtitle: Text("Decoration"),
+              leading: Icon( Icons.chair),),
             ),
           ),
           GestureDetector(
             onTap: null,
             child: Card(
               child: ListTile(
-                title: Text("Breakfast"),
-                subtitle: Text("7:00 AM"),
+                title: Text("Electrician"),
+                subtitle: Text("House Wearing"),
+                leading: Icon(Icons.lightbulb),
               ),
             ),
           ),
           GestureDetector(
             onTap: null,
             child: Card(
-              child: ListTile(title: Text("Work"), subtitle: Text("8:00 AM")),
+              child: ListTile(title: Text("Farming"), subtitle: Text("Rearing"),
+              leading: Icon(Icons.grass)
+              ),
             ),
           ),
         ],
