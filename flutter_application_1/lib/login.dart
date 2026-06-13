@@ -1,7 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'forget_password.dart';
 import 'sign_up.dart';
 import 'dashboard.dart';
+import 'auth_service.dart';
 
 class Login extends StatelessWidget {
   Login({super.key});
@@ -44,14 +46,19 @@ class Login extends StatelessWidget {
           SizedBox(height: 20),
           ElevatedButton(
             onPressed: () {
-              if (email == "Group3@idga.com" && password == "12345678") {
-                Navigator.pushAndRemoveUntil(
+              print(email);
+              print(password);
+              try {
+                authServices.value.signIn(
+                  emailAddress: email,
+                  userpassword: password,
+                );
+                Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => Dashboard()),
-                  (route) => false,
                 );
-              } else {
-                incorrect = true;
+              } on FirebaseAuthException catch (e) {
+                print(e.message);
               }
             },
             child: Text("Submit"),
