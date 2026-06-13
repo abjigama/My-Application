@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 import 'auth_service.dart';
 import 'login.dart';
-// ignore: unused_import
 import 'dashboard.dart';
 
 class SignUp extends StatelessWidget {
@@ -12,13 +11,17 @@ class SignUp extends StatelessWidget {
   String email = "";
   String password = "";
 
-  void register() async {
+  void register(BuildContext context) async {
     try {
       print(email);
       print(password);
       await authServices.value.register(
         emailAddress: email,
         userpassword: password,
+      );
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => Dashboard()),
       );
     } on FirebaseAuthException catch (error) {
       print(error.message);
@@ -61,15 +64,11 @@ class SignUp extends StatelessWidget {
           SizedBox(height: 20),
           ElevatedButton(
             onPressed: () {
-              register();
-              Navigator.push(
-               context,
-                 MaterialPageRoute(builder: (context) => Dashboard()),
-               );
+              register(context);
             },
             child: Text("Create Account"),
           ),
-          SizedBox(height: 10),
+          SizedBox(height: 20),
           Text("Already have an account?"),
           ElevatedButton(
             onPressed: () {
