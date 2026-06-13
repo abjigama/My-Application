@@ -19,7 +19,7 @@ class Login extends StatelessWidget {
       body: Column(
         children: [
           
-          Text("Welcome to My Day Application, Login to continue"),
+          Text("Welcome to ProFinder Application, Login to continue"),
           SizedBox(height: 20),
           Text("Email:"),
           TextFormField(
