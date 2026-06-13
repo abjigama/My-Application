@@ -6,6 +6,8 @@ class DeleteAccount extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text("Delete Account"),
+      centerTitle: true,),
       body: SafeArea(
         child: Column(
           children: [

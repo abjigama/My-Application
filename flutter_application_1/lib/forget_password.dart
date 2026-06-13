@@ -17,13 +17,14 @@ class ForgetPassword extends StatelessWidget {
           SizedBox(height: 20),
           Text("Email:"),
           TextFormField(
-           onChanged:(value){
-             email = value;
-           },
+            onChanged: (value) {
+              email = value;
+            },
           ),
           SizedBox(height: 20),
           ElevatedButton(
             onPressed: () {
+              print(email);
               authServices.value.resetPassword(emailAddress: email);
               Navigator.push(
                 context,

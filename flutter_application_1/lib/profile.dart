@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/delete_account.dart';
 import 'login.dart';
 import 'auth_service.dart';
 
@@ -29,6 +30,22 @@ class Profile extends StatelessWidget {
               // );
             },
             child: Text("Logout"),
+          ),
+           SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () {
+              
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => DeleteAccount()),
+                
+              );
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(builder: (context) => Login()),
+              // );
+            },
+            child: Text("Delete Account"),
           ),
         ],
       ),
