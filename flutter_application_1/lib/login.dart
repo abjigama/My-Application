@@ -45,14 +45,13 @@ class Login extends StatelessWidget {
           ),
           SizedBox(height: 20),
           ElevatedButton(
-            onPressed: () {
-              print(email);
-              print(password);
+            onPressed: ()  async {  
               try {
-                authServices.value.signIn(
+               await authServices.value.signIn(
                   emailAddress: email,
                   userpassword: password,
                 );
+                //this will now ONLY execute if signin succede
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => Dashboard()),
