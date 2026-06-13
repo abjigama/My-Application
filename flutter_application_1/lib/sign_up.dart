@@ -1,8 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:my_day/auth_services.dart';
+
 import 'auth_service.dart';
 import 'login.dart';
+// ignore: unused_import
 import 'dashboard.dart';
 
 class SignUp extends StatelessWidget {
@@ -61,14 +62,14 @@ class SignUp extends StatelessWidget {
           ElevatedButton(
             onPressed: () {
               register();
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(builder: (context) => Dashboard()),
-              // );
+              Navigator.push(
+               context,
+                 MaterialPageRoute(builder: (context) => Dashboard()),
+               );
             },
             child: Text("Create Account"),
           ),
-          SizedBox(height: 20),
+          SizedBox(height: 10),
           Text("Already have an account?"),
           ElevatedButton(
             onPressed: () {

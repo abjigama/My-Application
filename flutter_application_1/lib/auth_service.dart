@@ -67,4 +67,6 @@ class AuthServices {
     await currentUser!.reauthenticateWithCredential(credential);
     await currentUser!.updatePassword(newPassword);
   }
+
+  Future<void> sign_up({required String email, required String password}) async {}
 }
