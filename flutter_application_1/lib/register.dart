@@ -26,18 +26,14 @@ class Register extends StatefulWidget {
           email: _emailController.text,
           password: _passwordController.text,
          );
-       popPage();
        }on FirebaseAuthException catch (e) {
+        print(e.message);
         setState((){
           errorMessage = e.message ?? 'There is an error';
 
         });
        }
   
-      }
-
-      void popPage(){
-        Navigator.pop(context);
       }
 
      @override

@@ -1,11 +1,28 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:my_day/auth_services.dart';
+import 'auth_service.dart';
 import 'login.dart';
-
-
+import 'dashboard.dart';
 
 class SignUp extends StatelessWidget {
-  const SignUp({super.key});
-  
+  SignUp({super.key});
+
+  String email = "";
+  String password = "";
+
+  void register() async {
+    try {
+      print(email);
+      print(password);
+      await authServices.value.register(
+        emailAddress: email,
+        userpassword: password,
+      );
+    } on FirebaseAuthException catch (error) {
+      print(error.message);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -14,41 +31,50 @@ class SignUp extends StatelessWidget {
       body: Column(
         children: [
           Text(
-            "Welcome to ProFinder, a daily planning app. Create an account to start",
+            "Welcome to My Day, a daily planning app. Create an account to start",
           ),
           SizedBox(height: 20),
           Text("Full Name:"),
           TextFormField(),
-          SizedBox(height: 0.7),
+          SizedBox(height: 10),
           Text("Email Address:"),
-          TextFormField(),
-          SizedBox(height: 0.7),
+          TextFormField(
+            onChanged: (value) {
+              email = value;
+            },
+          ),
+          SizedBox(height: 10),
           Text("Phone Number:"),
           TextFormField(),
-          SizedBox(height: 0.7),
+          SizedBox(height: 10),
           Text("Password:"),
-          TextFormField(obscureText: true),
-          SizedBox(height: 0.7),
+          TextFormField(
+            obscureText: true,
+            onChanged: (value) {
+              password = value;
+            },
+          ),
+          SizedBox(height: 10),
           Text("Confirm Password"),
           TextFormField(obscureText: true),
-          SizedBox(height: 0.7),
-          //ElevatedButton(
-           // onPressed: () {
-              //Navigator.push(
-               // context,
-              //  MaterialPageRoute(builder: (context) => Login()),
-            //  );
-           // },
-            //child: Text("Create Account"),
-          //),
+          SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () {
+              register();
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(builder: (context) => Dashboard()),
+              // );
+            },
+            child: Text("Create Account"),
+          ),
           SizedBox(height: 20),
           Text("Already have an account?"),
           ElevatedButton(
             onPressed: () {
-              Navigator.pushAndRemoveUntil(
+              Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => Login()),
-                (route) => false
               );
             },
             child: Text("Back to Login"),

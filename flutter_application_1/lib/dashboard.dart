@@ -10,7 +10,7 @@ import 'event_planner.dart';
 class Dashboard extends StatelessWidget {
   const Dashboard({super.key});
   
-  void get consultant => null;
+  void get consultant {}
 
   @override
   Widget build(BuildContext context) {
