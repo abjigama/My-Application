@@ -15,6 +15,8 @@ class Dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // 1. Change overall page background color
+      backgroundColor: const Color.fromARGB(255, 30, 101, 137),
       appBar: AppBar(
         title: Text("Dashboard"),
         actions: [
@@ -43,6 +45,8 @@ class Dashboard extends StatelessWidget {
                 title: Text("Consultant"),
                 subtitle: Text("paediatrics"),
                 leading: Icon(Icons.local_hospital),
+             tileColor: const Color.fromARGB(255, 117, 156, 223),
+
               ),
             ),
           ),
@@ -56,7 +60,10 @@ class Dashboard extends StatelessWidget {
             child: Card(
               child: ListTile(
                 title: Text("Mechanic"), subtitle: Text("Automobile Repair"),
-                leading: Icon(Icons.car_crash_outlined),),
+                leading: Icon(Icons.car_crash_outlined),
+             tileColor: const Color.fromARGB(255, 117, 156, 223),
+                
+                ),
             ),
           ),
           GestureDetector(
@@ -68,7 +75,10 @@ class Dashboard extends StatelessWidget {
             },
             child: Card(
               child: ListTile(title: Text("Event PLanner"), subtitle: Text("Decoration"),
-              leading: Icon( Icons.chair),),
+              leading: Icon( Icons.chair),
+             tileColor: const Color.fromARGB(255, 117, 156, 223),
+              
+              ),
             ),
           ),
           GestureDetector(
@@ -83,6 +93,8 @@ class Dashboard extends StatelessWidget {
                 title: Text("Electrician"),
                 subtitle: Text("House Wearing"),
                 leading: Icon(Icons.lightbulb),
+             tileColor: const Color.fromARGB(255, 117, 156, 223),
+
               ),
             ),
           ),
@@ -95,7 +107,9 @@ class Dashboard extends StatelessWidget {
             },
             child: Card(
               child: ListTile(title: Text("Farming"), subtitle: Text("Rearing"),
-              leading: Icon(Icons.grass)
+              leading: Icon(Icons.grass),
+             tileColor: const Color.fromARGB(255, 117, 156, 223),
+
               ),
             ),
           ),
