@@ -15,13 +15,22 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Login Page")),
+      //1. Change overall page backround color
+      backgroundColor: const Color.fromARGB(255, 30, 101, 137),
+      //2. Add and color the AppBar
+      appBar: AppBar(
+        title: Text("ProFinder"),
+        backgroundColor: const Color.fromARGB(255, 239, 241, 252),
+        //set Appbar background color
+        elevation: 0,
+        //optional: removes the shadow under the appBar
+        ),
       body: Column(
         children: [
-          
           Text("Welcome to ProFinder Application, Login to continue"),
           SizedBox(height: 20),
           Text("Email:"),
+           
           TextFormField(
             onChanged: (value) {
               email = value;

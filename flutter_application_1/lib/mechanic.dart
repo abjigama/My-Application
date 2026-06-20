@@ -9,8 +9,9 @@ class Mechanic extends StatelessWidget{
          centerTitle: true,
          
          
-         foregroundColor: const Color.fromARGB(255, 16, 16, 16),
-         backgroundColor: const Color.fromARGB(255, 56, 117, 166)),
+         foregroundColor: const Color.fromARGB(255, 255, 252, 252),
+         backgroundColor: const Color.fromARGB(255, 56, 117, 166)
+         ),
         
          body:ListView(
           padding:EdgeInsets.only(left: 50, right: 50),
@@ -19,7 +20,8 @@ class Mechanic extends StatelessWidget{
           Card(
             child: ListTile(title: Text("Professional Auto Mechanic "),
              subtitle: Text("Keeping Your Vehicle Safe and Roadworthy"),
-             
+             tileColor: const Color.fromARGB(255, 117, 156, 223),
+             textColor: Colors.white
              
              
              
@@ -28,6 +30,8 @@ class Mechanic extends StatelessWidget{
           Card(
             child: ListTile(title: Text("Professional Engine Services"),
              subtitle: Text("Engine Repair,Oil change,Brake Services"),
+             tileColor: const Color.fromARGB(255, 117, 156, 223),
+             textColor: const Color.fromARGB(255, 241, 238, 238)
 
           ),
   

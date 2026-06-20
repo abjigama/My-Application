@@ -31,7 +31,8 @@ class SignUp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Sign up")),
+      appBar: AppBar(title: Text("Sign up"),
+      centerTitle: true,),
       body: Column(
         children: [
           Text(
@@ -58,9 +59,9 @@ class SignUp extends StatelessWidget {
               password = value;
             },
           ),
-          SizedBox(height: 10),
-          Text("Confirm Password"),
-          TextFormField(obscureText: true),
+          //SizedBox(height: 10),
+          //Text("Confirm Password"),
+          //TextFormField(obscureText: true),
           SizedBox(height: 20),
           ElevatedButton(
             onPressed: () {

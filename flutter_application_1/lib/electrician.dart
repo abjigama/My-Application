@@ -9,7 +9,7 @@ class Electrician extends StatelessWidget{
          centerTitle: true,
          
          
-         foregroundColor: const Color.fromARGB(255, 16, 16, 16),
+         foregroundColor: const Color.fromARGB(255, 251, 251, 251),
          backgroundColor: const Color.fromARGB(255, 56, 117, 166)),
         
          body:ListView(
@@ -20,6 +20,8 @@ class Electrician extends StatelessWidget{
             child: ListTile(title: Text("ABOUT- Professional Electrician Specializing In House Wiring,Electrical Installation,and Maintenance Services"),
              subtitle: Text("House Wiring"),
              
+             tileColor: const Color.fromARGB(255, 117, 156, 223),
+             textColor: Colors.white,
              
              
              
@@ -28,6 +30,8 @@ class Electrician extends StatelessWidget{
           Card(
             child: ListTile(title: Text("REQUEST SERVICES"),
              subtitle: Text("Call Electrician"),
+             tileColor: const Color.fromARGB(255, 117, 156, 223),
+             textColor: Colors.white
 
           ),
   

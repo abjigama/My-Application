@@ -9,7 +9,7 @@ class Consultant extends StatelessWidget{
          centerTitle: true,
          
          
-         foregroundColor: const Color.fromARGB(255, 16, 16, 16),
+         foregroundColor: const Color.fromARGB(255, 255, 255, 255),
          backgroundColor: const Color.fromARGB(255, 56, 117, 166)),
         
          body:ListView(
@@ -20,6 +20,8 @@ class Consultant extends StatelessWidget{
           Card(
             child: ListTile(title: Text("Description(pediatric consultant available for child health advice)"),
              subtitle: Text("Availability mon-fri"),
+             tileColor: const Color.fromARGB(255, 117, 156, 223),
+             textColor: Colors.white
              
              
              
@@ -29,6 +31,8 @@ class Consultant extends StatelessWidget{
           Card(
             child: ListTile(title: Text("Book Appointment"),
              subtitle: Text("Call Consultant"),
+             tileColor: const Color.fromARGB(255, 117, 156, 223),
+             textColor: Colors.white
 
           ),
   

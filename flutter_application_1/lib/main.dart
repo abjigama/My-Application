@@ -9,29 +9,19 @@ import 'auth_layout.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setPreferredOrientations(
-    [DeviceOrientation.portraitUp],
-  );
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
-  runApp(const MyApp());
-   
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  runApp(MaterialApp(home: AuthLayout(), debugShowCheckedModeBanner: false));
 }
 class MyApp extends StatelessWidget{
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context){
-    return const MaterialApp(
+    return MaterialApp(
      title: 'ProFinder',
      debugShowCheckedModeBanner: false,
-     home:  FirebaseDbButtons(),
-
+     home: const FirebaseDbButtons(), //
     );
-       
-    
   }
 
 }
